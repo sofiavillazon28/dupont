@@ -1,0 +1,161 @@
+.title-dark {
+    color: var(--secondary-500);
+}
+
+.title-light {
+    color: var(--primary-100);
+}
+
+.justify-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* ——— Espaciado ——— */
+.mr-16 {
+    margin-right: var(--sp-16);
+}
+
+.ml-16 {
+    margin-left: var(--sp-16);
+}
+
+.pl-4 {
+    padding-left: var(--sp-4);
+}
+
+.pr-4 {
+    padding-right: var(--sp-4);
+}
+
+
+.pt-32 {
+    padding-top: var(--sp-32);
+}
+
+.pt-64 {
+    padding-top: var(--sp-64);
+}
+
+.pt-88 {
+    padding-top: var(--sp-88);
+}
+
+.pt-120 {
+    padding-top: var(--sp-120);
+}
+
+.mb-4 {
+    margin-bottom: var(--sp-4);
+}
+
+.mb-12 {
+    margin-bottom: var(--sp-12);
+}
+
+.mb-16 {
+    margin-bottom: var(--sp-16);
+}
+
+.mb-24 {
+    margin-bottom: var(--sp-24);
+}
+
+.mb-32 {
+    margin-bottom: var(--sp-32);
+}
+
+.mb-42 {
+    margin-bottom: var(--sp-42);
+}
+
+.mt-16 {
+    margin-top: var(--sp-16);
+}
+
+.mt-32 {
+    margin-top: var(--sp-32);
+}
+
+.mt-64 {
+    margin-top: var(--sp-64);
+}
+
+.mt-120 {
+    margin-top: var(--sp-120);
+}
+
+.mt-152 {
+    margin-top: 152px;
+}
+
+.mb-64 {
+    margin-bottom: var(--sp-64);
+}
+
+.mb-88 {
+    margin-bottom: var(--sp-88);
+}
+
+.my-16 {
+    margin-bottom: var(--sp-16);
+    margin-top: var(--sp-16);
+}
+
+.my-24 {
+    margin-bottom: var(--sp-24);
+    margin-top: var(--sp-24);
+}
+
+
+.my-36 {
+    margin-bottom: var(--sp-36);
+    margin-top: var(--sp-36);
+}
+
+
+/* ——— Espaciado ——— */
+.py-16 {
+    padding-bottom: var(--sp-16);
+    padding-top: var(--sp-16);
+}
+
+.py-32 {
+    padding-bottom: var(--sp-32);
+    padding-top: var(--sp-32);
+}
+
+.py-42 {
+    padding-bottom: var(--sp-42);
+    padding-top: var(--sp-42);
+}
+
+.py-64 {
+    padding-bottom: var(--sp-64);
+    padding-top: var(--sp-64);
+}
+
+.py-88 {
+    padding-bottom: var(--sp-88);
+    padding-top: var(--sp-88);
+}
+
+.py-120 {
+    padding-bottom: var(--sp-120);
+    padding-top: var(--sp-120);
+}
+
+.p-32 {
+    padding: var(--sp-32);
+
+}
+
+.p-24 {
+    padding: var(--sp-24);
+
+}
+
+.p-16 {
+    padding: var(--sp-16);
+
+}

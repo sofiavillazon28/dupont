@@ -1,0 +1,227 @@
+/* ───── WRAPPER ───── */
+.stepper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+    margin: 48px 0px;
+    max-width: 950px;
+    counter-reset: counter;
+    list-style: none;
+}
+
+/* ───── CADA PASO ───── */
+.stepper .step {
+    position: relative;
+    flex: 1 1 0;
+    text-align: left;
+
+}
+
+/* Línea conectora: pseudo-elemento del paso */
+.stepper .step::after {
+    content: "";
+    position: absolute;
+    top: 21px;
+    /* centrado vertical con .circle */
+    left: 20%;
+    width: 79%;
+    height: 3px;
+    z-index: -2;
+    transform: scaleX(0);
+    /* animación de “relleno” */
+    transform-origin: left;
+    transition: transform .4s ease;
+
+}
+
+
+.stepper .step::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    background: none;
+    border: 2px solid var(--primary-500);
+    z-index: -1;
+    /* transform: scaleX(0); */
+    transform-origin: left;
+    transition: transform .4s ease;
+}
+
+/* el último paso no dibuja línea */
+.stepper .step:last-child::after {
+    display: none;
+}
+
+/* ─── Círculo con icono ─── */
+.stepper .circle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    border: 2px solid transparent;
+    background: var(--secondary-300);
+    color: var(--primary-0);
+    transition: background .4s, border-color .4s;
+}
+
+.stepper .meta {
+    display: block;
+    margin-top: 16px;
+}
+
+.stepper .meta small {
+    display: block;
+    color: var(--secondary-500);
+    letter-spacing: .04em;
+}
+
+.stepper .meta strong {
+    font-weight: 600;
+    color: var(--secondary-600);
+}
+
+/* ─── ESTADOS ─── */
+/* Terminado */
+.stepper .is-done .circle {
+    background: var(--success-800);
+}
+
+.stepper .is-done::before {
+    border: 2px solid var(--success-800);
+    background-color: #f6f7f9;
+}
+
+
+.stepper .is-done .icon-direct {
+    display: none;
+}
+
+.stepper .is-pending .icon-tick {
+    display: block !important;
+}
+
+.stepper .circle img {
+    width: 24px;
+    height: 24px;
+}
+
+.stepper .is-done::after {
+    background: var(--success-800);
+    transform: scaleX(1);
+}
+
+.stepper .is-pending::after {
+    background: var(--secondary-300);
+    transform: scaleX(1);
+}
+
+/* En proceso */
+.stepper .is-current .circle {
+    background: var(--primary-500);
+    color: var(--primary-500);
+    border-color: var(--primary-500);
+}
+
+.stepper .is-current::before {
+    border: 2px solid var(--primary-500) !important;
+    background-color: #f6f7f9;
+}
+
+.stepper .is-current .icon-tick {
+    display: none;
+}
+
+
+.stepper .is-current .icon-direct {
+    display: block !important;
+}
+
+.stepper .is-current::after {
+    background: var(--primary-500);
+    transform: scaleX(1);
+}
+
+/* Pendiente (por defecto) */
+.stepper .is-pending .circle {
+    background: var(--secondary-300);
+}
+
+
+.stepper .is-pending strong {
+    color: var(--secondary-400);
+}
+
+.stepper .step.is-pending::before {
+    border: 2px solid var(--secondary-300) !important;
+    background-color: #f6f7f9;
+}
+
+.stepper .step.is-pending .icon-tick {
+    display: none !important;
+}
+
+.stepper .step.is-pending .icon-direct {
+    display: none !important;
+}
+
+/* ─── ANIMACIÓN cuando un paso se marca como done ─── */
+.stepper .step.done-animate .circle {
+    animation: pop 0.4s forwards;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+
+    60% {
+        transform: scale(1.25);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 640px) {
+    .stepper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .stepper .step {
+        text-align: left;
+        padding-left: 60px;
+        /* espacio para la línea */
+    }
+
+    .stepper .step::after {
+        top: 20px;
+        left: 20px;
+        height: 100%;
+        width: 4px;
+        transform-origin: top;
+    }
+
+    .stepper .circle {
+        margin: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .grid-form {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(232px, 1fr));
+        gap: 24px;
+    }
+
+    ;
+}

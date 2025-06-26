@@ -1,0 +1,106 @@
+/* ========= contenedor general ========= */
+.gallery {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* ========= imagen principal ========= */
+.gallery__main {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    /* 16:9 ratio — cambia si lo deseas */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, .08);
+}
+
+.gallery__main img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ========= flechas de navegación ========= */
+.gallery__nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, .45);
+    color: var(--primary-0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    cursor: pointer;
+    user-select: none;
+    transition: background .2s;
+}
+
+.gallery__nav img {
+    width: 18px;
+}
+
+.gallery__nav:hover {
+    background: rgba(0, 0, 0, .65);
+}
+
+.gallery__nav--prev {
+    left: .5rem;
+}
+
+.gallery__nav--next {
+    right: .5rem;
+}
+
+/* ========= tira de miniaturas ========= */
+.gallery__thumbs {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: .25rem;
+    padding-top: 4px;
+    padding-left: 3px;
+}
+
+.gallery__thumbs img {
+    flex: 0 0 var(--thumb-size);
+    height: var(--thumb-size);
+    object-fit: cover;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: outline .2s;
+    outline: 2px solid transparent;
+}
+
+.gallery__thumbs img:hover,
+.gallery__thumbs img.is-active {
+    outline: 3px solid var(--primary-500);
+}
+
+
+/* ========= responsive ========= */
+@media (max-width:600px) {
+    :root {
+        --thumb-size: 72px;
+    }
+
+    .gallery__main {
+        padding-top: 66%;
+    }
+
+    /* 3:2 ratio en móvil si prefieres */
+    .gallery__nav {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+    }
+}

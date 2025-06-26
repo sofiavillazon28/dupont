@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dupont | Products</title>
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/foundations.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/typo.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <script src="js/menu.js"></script>
+    <script src="js/language.js"></script>
+</head>
+
+<body>
+    <!-- ——— Header ——— -->
+    <header class="header-light">
+        <div class="container-large space-between d-flex">
+            <div class="logo"><img src="assets/svg/logo.svg" alt="logoDupont"></div>
+            <div class="logo-dark"><img src="assets/svg/logo-light.svg" alt="logoDupont"></div>
+
+            <button class="menu-toggle" aria-label="Menú">☰</button>
+
+            <div class="d-flex">
+                <nav class="main-nav" aria-label="Menú principal">
+                    <ul>
+                        <li><a class="btn btn-base" href="#">Compra tu auto</a></li>
+                        <li><a class="btn btn-base" href="#">Vende tu auto</a></li>
+                        <li><a class="btn btn-base" href="#">Tienda</a></li>
+                    </ul>
+                </nav>
+                <!-- Language switcher -->
+                <div id="langSwitch" class="lang-switch icon-only" data-lang="es">
+                    <!-- Botón que abre/cierra -->
+                    <button id="langBtn" class="lang-btn" aria-haspopup="listbox" aria-expanded="false"
+                        aria-label="Seleccionar idioma">
+                        <span class="flag flag-es" aria-hidden="true">🇪🇸</span>
+                        <span class="label"></span>
+                        <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </button>
+
+                    <!-- Lista de idiomas -->
+                    <ul id="langMenu" class="lang-menu" role="listbox">
+                        <li role="option" data-value="es" aria-selected="true">
+                            <span class="flag flag-es" aria-hidden="true">🇪🇸</span> Español
+                        </li>
+                        <li role="option" data-value="en">
+                            <span class="flag flag-en" aria-hidden="true">🇬🇧</span> English
+                        </li>
+                    </ul>
+                </div>
+                <button class="btn btn-secondary desktop-only">Contacto</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Title -->
+    <section class="section-web ">
+        <div class="container-large mt-152">
+            <div class="d-flex resp-bloc space-between mb-42">
+                <div>
+                    <h2 class="title-dark bold-36 ">Resultados de la búsqueda</h2>
+                    <p class="title-dark regular-16 mb-16 ">Autos 1 al 12 de 27</p>
+                </div>
+                <div>
+                    <button class="btn btn-secondary mr-16 mb-16">Más filtros <svg width="18" height="18"
+                            viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M4.0498 1.575H13.9498C14.7748 1.575 15.4498 2.25 15.4498 3.075V4.725C15.4498 5.325 15.0748 6.075 14.6998 6.45L11.4748 9.3C11.0248 9.675 10.7248 10.425 10.7248 11.025V14.25C10.7248 14.7 10.4248 15.3 10.0498 15.525L8.9998 16.2C8.02481 16.8 6.6748 16.125 6.6748 14.925V10.95C6.6748 10.425 6.3748 9.75 6.0748 9.375L3.2248 6.375C2.8498 6 2.5498 5.325 2.5498 4.875V3.15C2.5498 2.25 3.2248 1.575 4.0498 1.575Z"
+                                stroke="#1A202C" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M8.1975 1.575L4.5 7.5" stroke="#1A202C" stroke-miterlimit="10"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <button class="btn btn-secondary">Ordenar por</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ——— Search bar ——— -->
+    <section class="section-web">
+        <div class="container-large ">
+            <div>
+                <div class="search-bar-inline d-flex mb-64">
+                    <div class="select-wrapper border-item">
+                        <label class="bold-16" for="tipo">Elige la marca</label>
+                        <select>
+                            <option value="" selected hidden>Selecciona una marca</option>
+                            <option></option>
+                            <option>Toyota</option>
+                            <option>Hyundai</option>
+                            <option>Kia</option>
+                            <option>Nissan</option>
+                            <option>Chevrolet</option>
+                            <option>Mazda</option>
+                        </select>
+                    </div>
+                    <div class="select-wrapper border-item">
+                        <label class="bold-16" for="tipo">Elige el modelo</label>
+                        <select>
+                            <option value="" selected hidden>Selecciona un modelo</option>
+                            <option>Opción 1</option>
+                            <option>Opción 2</option>
+                            <option>Opción 3</option>
+                            <option>Opción 4</option>
+                        </select>
+                    </div>
+                    <div class="select-wrapper border-item">
+                        <label class="bold-16" for="tipo">Rango de precios</label>
+                        <select>
+                            <option value="" selected hidden>Selecciona una marca</option>
+                            <option>Entre $20,000 y $40,000</option>
+                            <option>Entre $20,000 y $40,000</option>
+                            <option>Entre $20,000 y $40,000</option>
+                            <option>Entre $20,000 y $40,000</option>
+                        </select>
+                    </div>
+                    <div class="select-wrapper border-item">
+                        <label class="bold-16" for="tipo">Año modelo</label>
+                        <select>
+                            <option value="" selected hidden>Selecciona un modelo</option>
+                            <option>2010</option>
+                            <option>2011</option>
+                            <option>2012</option>
+                            <option>2013</option>
+                            <option>2014</option>
+                        </select>
+                    </div>
+                    <div class="select-wrapper border-item">
+                        <label class="bold-16" for="tipo">KM</label>
+                        <select>
+                            <option value="" selected hidden>Selecciona un precio</option>
+                            <option>Entre 4,000.00 y 8,000.00</option>
+                            <option>Entre 4,000.00 y 8,000.00</option>
+                            <option>Entre 4,000.00 y 8,000.00</option>
+                            <option>Entre 4,000.00 y 8,000.00</option>
+                            <option>Entre 4,000.00 y 8,000.00</option>
+                        </select>
+                    </div>
+
+
+                    <button class="btn btn-primary full-width-r">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8.625 15.75C12.56 15.75 15.75 12.56 15.75 8.625C15.75 4.68997 12.56 1.5 8.625 1.5C4.68997 1.5 1.5 4.68997 1.5 8.625C1.5 12.56 4.68997 15.75 8.625 15.75Z"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M16.5 16.5L15 15" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TARJETAS -->
+    <section class="section-web mb-88">
+        <div class="container-large">
+            <div class="cards grid-3">
+
+                <article class="card black-light">
+                    <div class="card-img" style="background-image: url(assets/images/car-detail.jpg);">
+                        <span class="semibold-12 card-location">Surquillo</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="bold-20">Toyota Camry New</h3>
+                        <p class="regular-14">SUV</p>
+                        <p class="semibold-16 card-price mb-16">$29,000.00 <span> (S/. 34,600.00)</span></p>
+                        <div class="installment-box">
+                            <div class="card-type align-center">
+                                <h4 class="bold-12 mb-16">Simulación Couta mensual</h4>
+                            </div>
+                            <div class="d-flex-arround  ">
+                                <div>
+                                    <p class="bold-18">$350.74*</p>
+                                    <p class="installment-label medium-12">a 60 meses</p>
+                                </div>
+                                <div>
+                                    <p class="bold-18">30%</p>
+                                    <p class="installment-label medium-12">Pago inicial</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-type align-center">
+                            <h4 class="bold-12 mb-16">Características</h4>
+                        </div>
+                        <ul class="features">
+                            <li class="medium-12"> <img src="assets/svg/car-miles.svg" />40 520 Km</li>
+                            <li class="medium-12"> <img src="assets/svg/gas-station.svg" />Gasolina</li>
+                            <li class="medium-12"> <img src="assets/svg/car-automatic.svg" />Automático</li>
+                            <li class="medium-12"> <img src="assets/svg/paintbucket.svg" />1 500 CC</li>
+                            <li class="medium-12"> <img src="assets/svg/color-swatch.svg" />Gris Atómico</li>
+                            <li class="medium-12"> <img src="assets/svg/car.svg" />5 puertas</li>
+                        </ul>
+                        <button class="btn btn-primary full-width ">Comprar</button>
+                    </div>
+                </article>
+
+                <article class="card black-light">
+                    <div class="card-img" style="background-image: url(assets/images/car-detail.jpg);">
+                        <span class="semibold-12 card-location">Surquillo</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="bold-20">Toyota Camry New</h3>
+                        <p class="regular-14">SUV</p>
+                        <p class="semibold-16 card-price mb-16">$29,000.00 <span> (S/. 34,600.00)</span></p>
+                        <div class="installment-box">
+                            <div class="card-type align-center">
+                                <h4 class="bold-12 mb-16">Simulación Couta mensual</h4>
+                            </div>
+                            <div class="d-flex-arround  ">
+                                <div>
+                                    <p class="bold-18">$350.74*</p>
+                                    <p class="installment-label medium-12">a 60 meses</p>
+                                </div>
+                                <div>
+                                    <p class="bold-18">30%</p>
+                                    <p class="installment-label medium-12">Pago inicial</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-type align-center">
+                            <h4 class="bold-12 mb-16">Características</h4>
+                        </div>
+                        <ul class="features">
+                            <li class="medium-12"> <img src="assets/svg/car-miles.svg" />40 520 Km</li>
+                            <li class="medium-12"> <img src="assets/svg/gas-station.svg" />Gasolina</li>
+                            <li class="medium-12"> <img src="assets/svg/car-automatic.svg" />Automático</li>
+                            <li class="medium-12"> <img src="assets/svg/paintbucket.svg" />1 500 CC</li>
+                            <li class="medium-12"> <img src="assets/svg/color-swatch.svg" />Gris Atómico</li>
+                            <li class="medium-12"> <img src="assets/svg/car.svg" />5 puertas</li>
+                        </ul>
+                        <button class="btn btn-primary full-width ">Comprar</button>
+                    </div>
+                </article>
+
+                <article class="card black-light">
+                    <div class="card-img" style="background-image: url(assets/images/car-detail.jpg);">
+                        <span class="semibold-12 card-location">Surquillo</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="bold-20">Toyota Camry New</h3>
+                        <p class="regular-14">SUV</p>
+                        <p class="semibold-16 card-price mb-16">$29,000.00 <span> (S/. 34,600.00)</span></p>
+                        <div class="installment-box">
+                            <div class="card-type align-center">
+                                <h4 class="bold-12 mb-16">Simulación Couta mensual</h4>
+                            </div>
+                            <div class="d-flex-arround  ">
+                                <div>
+                                    <p class="bold-18">$350.74*</p>
+                                    <p class="installment-label medium-12">a 60 meses</p>
+                                </div>
+                                <div>
+                                    <p class="bold-18">30%</p>
+                                    <p class="installment-label medium-12">Pago inicial</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-type align-center">
+                            <h4 class="bold-12 mb-16">Características</h4>
+                        </div>
+                        <ul class="features">
+                            <li class="medium-12"> <img src="assets/svg/car-miles.svg" />40 520 Km</li>
+                            <li class="medium-12"> <img src="assets/svg/gas-station.svg" />Gasolina</li>
+                            <li class="medium-12"> <img src="assets/svg/car-automatic.svg" />Automático</li>
+                            <li class="medium-12"> <img src="assets/svg/paintbucket.svg" />1 500 CC</li>
+                            <li class="medium-12"> <img src="assets/svg/color-swatch.svg" />Gris Atómico</li>
+                            <li class="medium-12"> <img src="assets/svg/car.svg" />5 puertas</li>
+                        </ul>
+                        <button class="btn btn-primary full-width ">Comprar</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ——— Footer ——— -->
+    <footer>
+        <div class="container-large py-88">
+            <div class="d-flex-no-center space-between ">
+                <div>
+                    <img class="mb-16" src="assets/svg/logo-light.svg" alt="">
+                    <p class="medium-16">
+                        Tu auto ideal, con el respaldo de Dupont Auto Sale.
+                    </p>
+                </div>
+                <div class="d-flex-no-center">
+                    <div class="colum-flex">
+                        <h4 class="title-light mb-42">Nosotros</h4>
+                        <ul class="item-col">
+                            <li><a href="#">Sobre Dupont</a></li>
+                            <li><a href="#">Términos y condiciones</a></li>
+                            <li><a href="#">Políticas de privacidad</a></li>
+                            <li><a href="#">Promociones y campañas</a></li>
+                        </ul>
+                    </div>
+                    <div class="colum-flex">
+                        <h4 class="title-light mb-42">Compra</h4>
+                        <ul class="item-col">
+                            <li><a href="#">Ver marcas</a></li>
+                            <li><a href="#">Ver modelos</a></li>
+                            <li><a href="#">Servicio postventa</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-large d-flex-no-center space-between py-32">
+            <p class="copyright">©2025 DUPONT. All rights reserved</p>
+            <div class="footer-social">
+                <ul>
+                    <li><a href="#"><img src="assets/svg/icon-facebook.svg" alt=""></a></li>
+                    <li><a href="#"><img src="assets/svg/icon-instagram.svg" alt=""></a></li>
+                    <li><a href="#"><img src="assets/svg/icon-linkedin.svg" alt=""></a></li>
+                    <li><a href="#"><img src="assets/svg/icon-twitter.svg" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

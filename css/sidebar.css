@@ -1,0 +1,119 @@
+/* ——— Wrapper ——— */
+.sidebar {
+    width: 260px;
+    min-height: 100vh;
+    height: 70vh;
+    background: var(--primary-0);
+    box-shadow: 2px 0 12px var(--shadow);
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+}
+
+/* ——— Contenedor interior (bordes redondeados como en la captura) ——— */
+.sidebar-container {
+    background: var(--primary-0);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* ——— Encabezado de sección ——— */
+.sidebar-section {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--secondary-500);
+    letter-spacing: 0.05em;
+    margin-bottom: var(--sp-32);
+}
+
+/* ——— Lista de enlaces ——— */
+.sidebar-menu {
+    list-style: none;
+    flex: 1 1 auto;
+    /* empuja el footer abajo */
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-16);
+}
+
+.sidebar-menu li,
+.sidebar-footer {
+    position: relative;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-16);
+    padding: var(--sp-16);
+    border-radius: 10px;
+    font-size: 0.938rem;
+    color: var(--secondary-500);
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+    cursor: pointer;
+}
+
+.sidebar-icon {
+    width: 22px;
+    height: 22px;
+    stroke-width: 1.5;
+    fill: none;
+    stroke: currentColor;
+}
+
+/* ——— Hover / focus ——— */
+.sidebar-link:hover,
+.sidebar-link:focus-visible {
+    background: var(--primary-100);
+}
+
+/* ——— Item activo ——— */
+
+.sidebar-menu svg path {
+    fill: var(--secondary-500);
+    stroke: none;
+}
+
+.is-active svg path {
+    fill: var(--primary-0);
+    stroke: none;
+}
+
+.is-active>.sidebar-link {
+    background: var(--primary-500);
+    color: var(--primary-0);
+}
+
+.is-active>.sidebar-link .sidebar-icon {
+    color: var(--primary-0);
+}
+
+/* ——— Footer (cerrar sesión) ——— */
+.sidebar-footer {
+    margin-top: auto;
+}
+
+.sidebar-logout:hover {
+    background: var(--secondary-100);
+}
+
+/* ——— Responsive: oculta sidebar en pantallas pequeñas ——— */
+@media (max-width: 960px) {
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        padding-top: 120px;
+        transform: translateX(-100%);
+        transition: transform 0.3s;
+        z-index: 1000;
+    }
+
+    .sidebar--open {
+        transform: translateX(0);
+    }
+}

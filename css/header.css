@@ -1,0 +1,76 @@
+/* ——— Header ——— */
+header {
+    background: rgba(10, 16, 35, 0.50);
+    backdrop-filter: blur(10px);
+    color: var(--primary-400);
+    padding: 12px 32px;
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+    box-shadow: 0 6px 12px var(--shadow);
+}
+
+.header-light .main-nav.open a {
+    color: var(--primary-0);
+}
+
+.menu-toggle {
+    color: var(--primary-500);
+}
+
+.header-light {
+    background-color: var(--primary-0);
+
+}
+
+.header-light .main-nav a {
+    color: var(--secondary-900);
+}
+
+.header-light .main-nav a:hover {
+    color: var(--primary-600);
+    background-color: var(--primary-100);
+}
+
+.header-light .logo-dark {
+    display: none;
+}
+
+.header-dark .logo {
+    display: none;
+}
+
+.header-dark-solid .logo {
+    display: none;
+}
+
+.header-dark-solid {
+    background-color: var(--secondary-600);
+}
+
+.header-solid-dark .logo {
+    display: none;
+}
+
+.logo img {
+    width: 160px;
+    height: 66px;
+}
+
+header nav ul {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    margin-right: 32px;
+}
+
+nav a {
+    color: var(--primary-0);
+    text-decoration: none;
+    font-size: 14px;
+}

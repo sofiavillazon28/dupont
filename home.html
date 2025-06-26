@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dupont | Home</title>
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/foundations.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/typo.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <script src="js/hero.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/language.js"></script>
+
+</head>
+
+<body>
+    <!-- ——— Header ——— -->
+    <header class="header-dark">
+        <div class="container-large space-between d-flex">
+            <div class="logo"><img src="assets/svg/logo.svg" alt="logoDupont"></div>
+            <div class="logo-dark"><img src="assets/svg/logo-light.svg" alt="logoDupont"></div>
+
+            <button class="menu-toggle" aria-label="Menú">☰</button>
+
+            <div class="d-flex">
+                <nav class="main-nav" aria-label="Menú principal">
+                    <ul>
+                        <li><a class="btn btn-base" href="#">Compra tu auto</a></li>
+                        <li><a class="btn btn-base" href="#">Vende tu auto</a></li>
+                        <li><a class="btn btn-base" href="#">Tienda</a></li>
+
+                    </ul>
+                </nav>
+
+                <!-- Language switcher -->
+                <div id="langSwitch" class="lang-switch icon-only" data-lang="es">
+                    <!-- Botón que abre/cierra -->
+                    <button id="langBtn" class="lang-btn" aria-haspopup="listbox" aria-expanded="false"
+                        aria-label="Seleccionar idioma">
+                        <span class="flag flag-es" aria-hidden="true">🇪🇸</span>
+                        <span class="label"></span>
+                        <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </button>
+
+                    <!-- Lista de idiomas -->
+                    <ul id="langMenu" class="lang-menu" role="listbox">
+                        <li role="option" data-value="es" aria-selected="true">
+                            <span class="flag flag-es" aria-hidden="true">🇪🇸</span> Español
+                        </li>
+                        <li role="option" data-value="en">
+                            <span class="flag flag-en" aria-hidden="true">🇬🇧</span> English
+                        </li>
+                    </ul>
+                </div>
+
+                <button class="btn btn-secondary desktop-only">Contacto</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ——— Hero ——— -->
+    <section class="hero-slider">
+        <button class="nav prev" aria-label="Anterior">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.25 14.94L6.36 10.05C5.7825 9.4725 5.7825 8.5275 6.36 7.95L11.25 3.06" stroke-width="1.5"
+                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+        <button class="nav next" aria-label="Siguiente">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.68262 14.94L11.5726 10.05C12.1501 9.4725 12.1501 8.5275 11.5726 7.95L6.68262 3.06"
+                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+        </button>
+        <div class="slides">
+            <div class="slide active" data-title="Encuentra el auto que buscas<br>en minutos"
+                data-sub="Rápido, fácil y confiable.">
+                <div class="img-placeholder" style="background-image: url(assets/images/hero-auto.jpg);"></div>
+            </div>
+            <div class="slide" data-title="Conduce hacia tu nueva aventura"
+                data-sub="Modelos para cada estilo de vida.">
+                <div class="img-placeholder" style="background-image: url(assets/images/hero-auto.jpg);"></div>
+            </div>
+
+        </div>
+        <div class="hero-overlay">
+            <p class="hero-sub regular-20"></p>
+            <h1 class="hero-title semibold-56"></h1>
+        </div>
+    </section>
+
+    <!-- ——— Search bar ——— -->
+    <div class="search-bar d-flex">
+        <div class="select-wrapper border-item">
+            <label class="bold-16" for="tipo">Elige la marca</label>
+            <select>
+                <option value="" selected hidden>Selecciona una marca</option>
+                <option></option>
+                <option>Toyota</option>
+                <option>Hyundai</option>
+                <option>Kia</option>
+                <option>Nissan</option>
+                <option>Chevrolet</option>
+                <option>Mazda</option>
+            </select>
+        </div>
+
+        <div class="select-wrapper border-item">
+            <label class="bold-16" for="tipo">Elige el modelo</label>
+            <select>
+                <option value="" selected hidden>Selecciona un modelo</option>
+                <option>Opción 1</option>
+                <option>Opción 2</option>
+                <option>Opción 3</option>
+                <option>Opción 4</option>
+            </select>
+        </div>
+
+        <div class="select-wrapper border-item">
+            <label class="bold-16" for="tipo">Rango de precios</label>
+            <select>
+                <option value="" selected hidden>Selecciona un precio</option>
+                <option>Entre $1200.00 y $2200.00</option>
+                <option>Entre $1200.00 y $2200.00</option>
+                <option>Entre $1200.00 y $2200.00</option>
+                <option>Entre $1200.00 y $2200.00</option>
+                <option>Entre $1200.00 y $2200.00</option>
+            </select>
+        </div>
+
+
+        <button class="btn btn-primary full-width-r">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M8.625 15.75C12.56 15.75 15.75 12.56 15.75 8.625C15.75 4.68997 12.56 1.5 8.625 1.5C4.68997 1.5 1.5 4.68997 1.5 8.625C1.5 12.56 4.68997 15.75 8.625 15.75Z"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M16.5 16.5L15 15" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Buscar
+        </button>
+    </div>
+
+    <!-- ——— Categories ——— -->
+    <section class="section-web py-120">
+        <div class="container-large">
+
+            <h2 class="title-dark bold-36 mb-32 ">Buscar por tipo</h2>
+
+            <div class="grid-5">
+                <div class="cat-card">
+                    <div class="img-placeholder" style="background-image: url(assets/images/suv.jpg);">
+                        <div class="card-text">
+                            <p class="regular-16">3 Cars</p>
+                            <h4 class="bold-18">SUV</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="cat-card">
+                    <div class="img-placeholder" style="background-image: url(assets/images/sedan.jpg);">
+                        <div class="card-text">
+                            <p class="regular-16">3 Cars</p>
+                            <h4 class="bold-18">Sedan</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="cat-card">
+                    <div class="img-placeholder" style="background-image: url(assets/images/Hatchback.jpg);">
+                        <div class="card-text">
+                            <p class="regular-16">3 Cars</p>
+                            <h4 class="bold-18">Hatchback</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="cat-card">
+                    <div class="img-placeholder" style="background-image: url(assets/images/Hybrid.jpg);">
+                        <div class="card-text">
+                            <p class="regular-16">3 Cars</p>
+                            <h4 class="bold-18">Hybrid</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="cat-card">
+                    <div class="img-placeholder" style="background-image: url(assets/images/Convertible.jpg);">
+                        <div class="card-text">
+                            <p class="regular-16">3 Cars</p>
+                            <h4 class="bold-18">Convertible</h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ——— Why choose us ——— -->
+    <section class="section-light py-120">
+        <div class="container-large">
+
+            <h2 class="title-dark semibold-36 mb-32 align-center">¿Por qué elegirnos?</h2>
+
+            <div class="grid-4">
+                <div class="why-card">
+                    <img class="mb-24" src="assets/images/wallet.png" alt="">
+                    <h3 class="medium-20 mb-24">Financiamiento flexible</h3>
+                    <p class="regular-16">
+                        Te ofrecemos alternativas de pago adaptadas a tu presupuesto, con cuotas
+                        accesibles y procesos rápidos.
+                    </p>
+                </div>
+                <div class="why-card">
+                    <img class="mb-24" src="assets/images/dollar-square.png" alt="">
+                    <h3 class="medium-20 mb-24">Precios transparentes</h3>
+                    <p class="regular-16">
+                        Mostramos el precio real de cada vehículo, sin costos ocultos ni
+                        sorpresas al momento de la compra.
+                    </p>
+                </div>
+                <div class="why-card">
+                    <img class="mb-24" src="assets/images/tag-user.png" alt="">
+                    <h3 class="medium-20 mb-24">Asesoría de expertos</h3>
+                    <p class="regular-16">
+                        Nuestro equipo te acompaña en todo el proceso para ayudarte a tomar la
+                        mejor decisión.
+                    </p>
+                </div>
+                <div class="why-card">
+                    <img class="mb-24" src="assets/images/car.png" alt="">
+                    <h3 class="medium-20 mb-24">Autos garantizados</h3>
+                    <p class="regular-16">
+                        Cada unidad es evaluada minuciosamente para ofrecerte vehículos en
+                        excelentes condiciones.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ——— CTA ——— -->
+    <section class="cta" style="background-image: url(assets/images/banner-auto.jpg) ;">
+        <div class="container-large">
+
+            <div class="cta-content">
+                <h2 class="semibold-72 mb-32">
+                    Conecta con el auto<br />
+                    perfecto para ti.
+                </h2>
+                <button class="btn btn-secondary">Iniciar búsqueda
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke="#131825" d="M10.8223 4.4475L15.3748 9L10.8223 13.5525" stroke-width="1.5"
+                            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                        <path stroke="#131825" d="M2.625 9H15.2475" stroke-width="1.5" stroke-miterlimit="10"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ——— Footer ——— -->
+    <footer>
+        <div class="container-large py-88">
+            <div class="d-flex-no-center space-between ">
+
+                <div>
+                    <img class="mb-16" src="assets/svg/logo-light.svg" alt="">
+                    <p class="medium-16">
+                        Tu auto ideal, con el respaldo de Dupont Auto Sale.
+                    </p>
+                </div>
+
+                <div class="d-flex-no-center">
+                    <div class="colum-flex">
+                        <h4 class="title-light mb-42">Nosotros</h4>
+                        <ul class="item-col">
+                            <li><a href="#">Sobre Dupont</a></li>
+                            <li><a href="#">Términos y condiciones</a></li>
+                            <li><a href="#">Políticas de privacidad</a></li>
+                            <li><a href="#">Promociones y campañas</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="colum-flex">
+                        <h4 class="title-light mb-42">Compra</h4>
+                        <ul class="item-col">
+                            <li><a href="#">Ver marcas</a></li>
+                            <li><a href="#">Ver modelos</a></li>
+                            <li><a href="#">Servicio postventa</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="container-large d-flex-no-center space-between py-32">
+            <p class="copyright">©2025 DUPONT. All rights reserved</p>
+            <div class="footer-social">
+                <ul>
+                    <li><a href="#"><img src="assets/svg/icon-facebook.svg" alt=""></a></li>
+                    <li><a href="#"><img src="assets/svg/icon-instagram.svg" alt=""></a></li>
+                    <li><a href="#"><img src="assets/svg/icon-linkedin.svg" alt=""></a></li>
+                    <li><a href="#"><img src="assets/svg/icon-twitter.svg" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

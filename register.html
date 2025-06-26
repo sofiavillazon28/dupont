@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dupont | Registro</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/foundations.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/typo.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/gallery-image.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="stylesheet" href="css/login.css" />
+</head>
+
+<body>
+    <main class="login-wrapper register">
+        <!-- Lado izquierdo (branding) -->
+        <img class="logo" src="assets/svg/logo-light.svg" alt="Dupont Auto Sale logo" />
+        <section class="brand-pane register align-center">
+            <img class="car" src="assets/images/auto-login.png" alt="Auto de frente" />
+        </section>
+
+        <!-- Lado derecho (formulario) -->
+        <section class="form-pane">
+            <div class="card p-32" role="form">
+                <h1 class="bold-36">Crea tu cuenta</h1>
+                <p class="subtitle regular-16 mb-42"> Completa el formulario para empezar a publicar autos.</p>
+
+                <form class="mb-42" action="#" method="post">
+                    <div class="form-group mb-24">
+                        <label class="mb-12 semibold-14" for="nombre">Nombre(s)</label>
+                        <input class="input" type="text" id="nombre" name="nombre" placeholder="tu@email.com"
+                            required />
+                    </div>
+
+                    <div class="form-group mb-24">
+                        <label class="mb-12 semibold-14" for="apellidos">Apellidos</label>
+                        <input class="input" type="text" id="apellidos" name="apellidos"
+                            placeholder="Ingresa tus apellidos" required />
+                    </div>
+
+                    <div class="form-group mb-24">
+                        <label class="mb-12 semibold-14" for="email">Correro</label>
+                        <input class="input" type="email" id="email" name="email" placeholder="tu@email.com" required />
+                    </div>
+
+                    <div class="form-group mb-42">
+                        <label class="mb-12 semibold-14" for="password ">Contraseña</label>
+                        <input class="input" type="password" id="password" name="password" placeholder="••••••••"
+                            required />
+                    </div>
+
+                    <div class="form-group mb-42">
+                        <label class="mb-12 semibold-14" for="password ">Repite tu contraseña</label>
+                        <input class="input" type="password" id="password" name="password" placeholder="••••••••"
+                            required />
+                    </div>
+
+                    <button type="submit" class="btn btn-primary full-width ">Registrarme</button>
+                </form>
+
+                <p class="footnote align-center">
+                    ¿ya tienes cuenta?
+                    <a href="#">Ingresa</a>
+                </p>
+            </div>
+            <img class="circle" src="assets/images/Subtract.png" alt="Auto de frente" />
+
+        </section>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+ /* ===== CONTENEDOR GRID ===== */
+ .cards {
+     max-width: 100%;
+     display: grid;
+     gap: 2rem;
+     /* Tres columnas fijas en desktop; auto-fit para escalonar en tablets/móvil */
+ }
+
+ /* ===== TARJETA ===== */
+ .card {
+     color: var(--secondary-600) !important;
+     box-shadow: var(--shadow);
+     display: flex;
+     flex-direction: column;
+     overflow: hidden;
+     border-radius: 16px;
+     box-shadow: 0px 8px 8px 0px rgba(67, 88, 127, 0.15);
+
+ }
+
+ .align-stretch {
+     align-items: stretch !important;
+ }
+
+ /* --- Placeholder de imagen --- */
+ .card-img {
+     height: 200px;
+     background: var(--secondary-200);
+     background-position: center;
+     background-size: cover;
+     /* Recuadro gris */
+     position: relative;
+ }
+
+
+ /* --- Cuerpo --- */
+ .card-body {
+     padding: 1.5rem;
+     display: flex;
+     flex-direction: column;
+     flex: 1;
+ }
+
+ .card-type {
+     color: var(--secondary-400);
+ }
+
+ .card-price {
+     color: var(--primary-600);
+ }
+
+ .card-price span {
+     color: var(--primary-700);
+ }
+
+ /* --- Simulación de cuota --- */
+ .installment-box {
+     width: 100%;
+     text-align: center;
+     border-top: 1px solid var(--primary-100);
+     border-bottom: 1px solid var(--primary-100);
+     padding: 1rem 0;
+     margin-bottom: 1rem;
+ }
+
+ .installment-box p {
+     margin: 0;
+ }
+
+ .installment-label {
+     color: var(--secondary-400);
+ }
+
+ .features {
+     list-style: none;
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 18px 4px;
+     color: var(--secondary-400);
+     margin-bottom: 1.5rem;
+     text-align: center;
+ }
+
+ .features-6 {
+     list-style: none;
+     display: grid;
+     grid-template-columns: repeat(auto-fill, minmax(150px, 8fr));
+     gap: 32px 4px;
+     color: var(--secondary-400);
+     margin-bottom: 1.5rem;
+     margin-top: 1.5rem;
+     text-align: center;
+ }
+
+ .features-6 img {
+     width: 32px !important;
+     height: 32px !important;
+ }
+
+ .features li {
+     display: grid;
+     justify-content: space-evenly;
+     justify-items: center;
+ }
+
+ .features li img {
+     width: 24px;
+     height: 24px;
+     margin-bottom: 8px;
+ }
+
+ .card-location {
+     position: absolute;
+     top: 1rem;
+     left: 1rem;
+     background: var(--secondary-900);
+     color: var(--primary-0);
+     font-size: .75rem;
+     font-weight: 600;
+     padding: .25rem .9rem;
+     border-radius: 999px;
+ }

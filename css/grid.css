@@ -1,0 +1,135 @@
+.container-large {
+    min-width: 1025px;
+    max-width: 1440px;
+    width: 100%;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    z-index: 1;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.container-header-intranet {
+    min-width: 1025px;
+    max-width: calc(100% - 120px);
+    width: 100%;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    z-index: 1;
+
+}
+
+.r-button {
+    display: none;
+}
+
+.container-intranet {
+    min-width: 1025px;
+    max-width: calc(100% - 120px);
+    width: 100%;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    z-index: 1;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.container {
+    width: 100%;
+    min-width: 230px;
+    max-width: calc(100% - 260px);
+    position: relative;
+}
+
+.flex-start {
+    align-items: flex-start !important;
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+}
+
+.d-flex-no-center {
+    display: flex;
+}
+
+.d-flex-arround {
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: space-around;
+}
+
+.space-between {
+    justify-content: space-between;
+    gap: 32px;
+}
+
+
+.grid-5 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(221px, 5fr));
+    gap: 24px;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(269px, 4fr));
+    gap: 24px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
+    gap: 24px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(342px, 3fr));
+    gap: 24px;
+}
+
+.grid-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(562px, 2fr));
+    gap: 24px;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+.col-3 {
+    width: calc(100% / 4);
+}
+
+.col-6 {
+    width: calc(100% / 2);
+}
+
+.col-2 {
+    width: calc(100% / 6);
+}
+
+.gap-16 {
+    gap: 16px !important;
+}
+
+.gap-32 {
+    gap: 32px;
+}
+
+.gap-64 {
+    gap: 64px;
+}
